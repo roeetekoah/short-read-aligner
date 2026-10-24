@@ -1,0 +1,61 @@
+{
+  "generator_seed": 20261011,
+  "origin": "new synthetic portfolio data; no course reads or genome data",
+  "workloads": [
+    {
+      "name": "random",
+      "reference_bases": 2048,
+      "reads": 160,
+      "lengths": [
+        36,
+        40
+      ],
+      "mutation_counts": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "repeat-rich",
+      "reference_bases": 2048,
+      "reads": 160,
+      "lengths": [
+        36,
+        40
+      ],
+      "mutation_counts": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "seed-disruption",
+      "reference_bases": 40,
+      "reads": 5,
+      "lengths": [
+        36,
+        40
+      ],
+      "mutation_counts": [
+        0,
+        2,
+        3
+      ]
+    }
+  ],
+  "sha256": {
+    "benchmarks/data/random.fa": "8b23c8fc4d692aa04f720b0eaeffa5d4b452db2ddeabfa063f98c2c041e8dc54",
+    "benchmarks/data/random.fastq": "fe727a5df5152fb5ad621883fef2ab3d0b1641fdd68bcbcae3dca6b45758fb01",
+    "benchmarks/data/repeat-rich.fa": "5c53a8e1f22e97f2f218d0700aa30746cdf3dae5cf645148b49e34aa70d3daf9",
+    "benchmarks/data/repeat-rich.fastq": "06fb18effa010f332bcd2239a8c6811adb513c666e0cbb089b881b835d0bd56c",
+    "benchmarks/data/seed-disruption.fa": "be040d914dcf92b01a1fecc607da46e83901f01dd12141781338402a47bcea9f",
+    "benchmarks/data/seed-disruption.fastq": "147fbbc9ccc7ae59d08afa65e3e5cee45374780ef634f199f187aff2814c9797",
+    "examples/expected.tsv": "aecfac88e60081fb0f122074017117610a3f51f90cb60bbc6220e72edca5c5cb",
+    "examples/reads.fastq": "535e11a75cb842bcd42a48c861d09f0f2426127c2f6b0e654c20e21999995b4b",
+    "examples/reference.fa": "96a878a1a386b8625cc9173a68eaf072260077ebd5e36d99b1caafd73533e231"
+  }
+}

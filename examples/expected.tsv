@@ -1,0 +1,8 @@
+read_id	reference	start	end	strand	mismatches	n_best	tie_scope
+forward	synthetic	20	60	+	0	1	retrieved-candidates
+reverse	synthetic	90	126	-	0	1	retrieved-candidates
+one_substitution	synthetic	30	70	+	1	1	retrieved-candidates
+two_substitutions	synthetic	110	146	+	2	1	retrieved-candidates
+over_budget	synthetic	.	.	.	3	0	retrieved-candidates
+repeat_tie	synthetic	192	232	+	0	2	retrieved-candidates
+unknown_bases	synthetic	.	.	.	3	0	retrieved-candidates

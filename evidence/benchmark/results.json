@@ -1,0 +1,573 @@
+{
+  "prepared_date": "2026-10-11",
+  "generated_at_utc": "2026-10-11T06:07:08.596705+00:00",
+  "python": "3.13.13",
+  "implementation": "CPython",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "logical_cpus": 28,
+  "single_thread": true,
+  "repeats": 3,
+  "timing": "preloaded inputs; build and alignment separate; no tracing or file I/O; one warm-up per variant",
+  "memory": "separate fresh build+alignment; peak additional traced Python allocations; excludes preloaded inputs/interpreter; NOT peak RSS",
+  "data_manifest_sha256": "be054607c9f220ac4924dd9cc29c66d229c87d3952e820e1d69a4dae34955c22",
+  "code_sha256": {
+    "short_read_aligner/core.py": "05970f4a38663605cb105f00dde4bf1b0f0ab8f4120c33d29b867964e11387d8",
+    "validation/oracle.py": "3c51bdb328dd43fe6f7b2d694d86459d23f70b4e0a2732c34ed8da5f0e51d176",
+    "benchmarks/run.py": "ed884bcaff5cff782fc49e81518514b58d2e31761ed5ca5036229712d9ea3573"
+  },
+  "workloads": [
+    {
+      "name": "random",
+      "reference_bases": 2048,
+      "reads": 160,
+      "oracle": {
+        "alignment_seconds": [
+          0.936643399996683,
+          0.927266899998358,
+          0.9522065999990446
+        ],
+        "median_alignment_seconds": 0.936643399996683,
+        "peak_additional_python_bytes": 50242
+      },
+      "variants": {
+        "full-k12": {
+          "config": {
+            "max_mismatches": 2,
+            "max_hits_per_seed": null,
+            "min_seed_votes": 1,
+            "early_exit": false,
+            "minimizer_w": null,
+            "k": 12
+          },
+          "build_seconds": [
+            0.00037039999733678997,
+            0.00035230000503361225,
+            0.0003528000015649013
+          ],
+          "alignment_seconds": [
+            0.0007537999990745448,
+            0.0007054999950923957,
+            0.000702500001352746
+          ],
+          "cold_compute_seconds": [
+            0.0011241999964113347,
+            0.001057800000126008,
+            0.0010553000029176474
+          ],
+          "correctness": {
+            "total": 160,
+            "oracle_mapped": 120,
+            "mapped": 120,
+            "false_unmapped": 0,
+            "invalid_mapping": 0,
+            "optimal_mapping": 120,
+            "suboptimal_mapping": 0,
+            "tie_count_disagreements": 0,
+            "oracle_ambiguous_mapped": 0
+          },
+          "peak_additional_python_bytes": 452859,
+          "index_keys": 2037,
+          "index_positions": 2037,
+          "median_build_seconds": 0.0003528000015649013,
+          "median_alignment_seconds": 0.0007054999950923957,
+          "median_cold_compute_seconds": 0.001057800000126008
+        },
+        "full-k15": {
+          "config": {
+            "max_mismatches": 2,
+            "max_hits_per_seed": null,
+            "min_seed_votes": 1,
+            "early_exit": false,
+            "minimizer_w": null,
+            "k": 15
+          },
+          "build_seconds": [
+            0.00036190000537317246,
+            0.0003538000019034371,
+            0.00037570000131381676
+          ],
+          "alignment_seconds": [
+            0.0006924999979673885,
+            0.0006914999976288527,
+            0.000687700005073566
+          ],
+          "cold_compute_seconds": [
+            0.001054400003340561,
+            0.0010452999995322898,
+            0.0010634000063873827
+          ],
+          "correctness": {
+            "total": 160,
+            "oracle_mapped": 120,
+            "mapped": 109,
+            "false_unmapped": 11,
+            "invalid_mapping": 0,
+            "optimal_mapping": 109,
+            "suboptimal_mapping": 0,
+            "tie_count_disagreements": 0,
+            "oracle_ambiguous_mapped": 0
+          },
+          "peak_additional_python_bytes": 458434,
+          "index_keys": 2034,
+          "index_positions": 2034,
+          "median_build_seconds": 0.00036190000537317246,
+          "median_alignment_seconds": 0.0006914999976288527,
+          "median_cold_compute_seconds": 0.001054400003340561
+        },
+        "minimizer-k12-w4": {
+          "config": {
+            "max_mismatches": 2,
+            "max_hits_per_seed": null,
+            "min_seed_votes": 1,
+            "early_exit": false,
+            "minimizer_w": 4,
+            "k": 12
+          },
+          "build_seconds": [
+            0.0032659999997122213,
+            0.0032404000012320466,
+            0.0032396000024164096
+          ],
+          "alignment_seconds": [
+            0.012226999999256805,
+            0.012218199997732881,
+            0.012365099995804485
+          ],
+          "cold_compute_seconds": [
+            0.015492999998969026,
+            0.015458599998964928,
+            0.015604699998220894
+          ],
+          "correctness": {
+            "total": 160,
+            "oracle_mapped": 120,
+            "mapped": 120,
+            "false_unmapped": 0,
+            "invalid_mapping": 0,
+            "optimal_mapping": 120,
+            "suboptimal_mapping": 0,
+            "tie_count_disagreements": 0,
+            "oracle_ambiguous_mapped": 0
+          },
+          "peak_additional_python_bytes": 391276,
+          "index_keys": 868,
+          "index_positions": 868,
+          "median_build_seconds": 0.0032404000012320466,
+          "median_alignment_seconds": 0.012226999999256805,
+          "median_cold_compute_seconds": 0.015492999998969026
+        },
+        "full-k12-early-exit": {
+          "config": {
+            "max_mismatches": 2,
+            "max_hits_per_seed": null,
+            "min_seed_votes": 1,
+            "early_exit": true,
+            "minimizer_w": null,
+            "k": 12
+          },
+          "build_seconds": [
+            0.0003723999980138615,
+            0.00034839999716496095,
+            0.0003496999997878447
+          ],
+          "alignment_seconds": [
+            0.0007213999997475185,
+            0.0007110000005923212,
+            0.0007040999989840202
+          ],
+          "cold_compute_seconds": [
+            0.00109379999776138,
+            0.001059399997757282,
+            0.001053799998771865
+          ],
+          "correctness": {
+            "total": 160,
+            "oracle_mapped": 120,
+            "mapped": 120,
+            "false_unmapped": 0,
+            "invalid_mapping": 0,
+            "optimal_mapping": 120,
+            "suboptimal_mapping": 0,
+            "tie_count_disagreements": 0,
+            "oracle_ambiguous_mapped": 0
+          },
+          "peak_additional_python_bytes": 452891,
+          "index_keys": 2037,
+          "index_positions": 2037,
+          "median_build_seconds": 0.0003496999997878447,
+          "median_alignment_seconds": 0.0007110000005923212,
+          "median_cold_compute_seconds": 0.001059399997757282
+        }
+      }
+    },
+    {
+      "name": "repeat-rich",
+      "reference_bases": 2048,
+      "reads": 160,
+      "oracle": {
+        "alignment_seconds": [
+          0.9193668000007165,
+          0.9237197999973432,
+          0.9401614000016707
+        ],
+        "median_alignment_seconds": 0.9237197999973432,
+        "peak_additional_python_bytes": 2864544
+      },
+      "variants": {
+        "full-k12": {
+          "config": {
+            "max_mismatches": 2,
+            "max_hits_per_seed": null,
+            "min_seed_votes": 1,
+            "early_exit": false,
+            "minimizer_w": null,
+            "k": 12
+          },
+          "build_seconds": [
+            0.0003108000018983148,
+            0.00030420000257436186,
+            0.0003176000027451664
+          ],
+          "alignment_seconds": [
+            0.03171959999599494,
+            0.03588879999733763,
+            0.03293399999529356
+          ],
+          "cold_compute_seconds": [
+            0.032030399997893255,
+            0.03619299999991199,
+            0.03325159999803873
+          ],
+          "correctness": {
+            "total": 160,
+            "oracle_mapped": 121,
+            "mapped": 121,
+            "false_unmapped": 0,
+            "invalid_mapping": 0,
+            "optimal_mapping": 121,
+            "suboptimal_mapping": 0,
+            "tie_count_disagreements": 0,
+            "oracle_ambiguous_mapped": 49
+          },
+          "peak_additional_python_bytes": 414685,
+          "index_keys": 1039,
+          "index_positions": 2037,
+          "median_build_seconds": 0.0003108000018983148,
+          "median_alignment_seconds": 0.03293399999529356,
+          "median_cold_compute_seconds": 0.03325159999803873
+        },
+        "full-k15": {
+          "config": {
+            "max_mismatches": 2,
+            "max_hits_per_seed": null,
+            "min_seed_votes": 1,
+            "early_exit": false,
+            "minimizer_w": null,
+            "k": 15
+          },
+          "build_seconds": [
+            0.0003108000018983148,
+            0.00031960000342223793,
+            0.0003036999987671152
+          ],
+          "alignment_seconds": [
+            0.029792000001179986,
+            0.030363799996848684,
+            0.0394903999986127
+          ],
+          "cold_compute_seconds": [
+            0.0301028000030783,
+            0.030683400000270922,
+            0.03979409999737982
+          ],
+          "correctness": {
+            "total": 160,
+            "oracle_mapped": 121,
+            "mapped": 115,
+            "false_unmapped": 6,
+            "invalid_mapping": 0,
+            "optimal_mapping": 115,
+            "suboptimal_mapping": 0,
+            "tie_count_disagreements": 0,
+            "oracle_ambiguous_mapped": 48
+          },
+          "peak_additional_python_bytes": 407107,
+          "index_keys": 1042,
+          "index_positions": 2034,
+          "median_build_seconds": 0.0003108000018983148,
+          "median_alignment_seconds": 0.030363799996848684,
+          "median_cold_compute_seconds": 0.030683400000270922
+        },
+        "minimizer-k12-w4": {
+          "config": {
+            "max_mismatches": 2,
+            "max_hits_per_seed": null,
+            "min_seed_votes": 1,
+            "early_exit": false,
+            "minimizer_w": 4,
+            "k": 12
+          },
+          "build_seconds": [
+            0.0029888999997638166,
+            0.0029743000050075352,
+            0.0029606000025523826
+          ],
+          "alignment_seconds": [
+            0.06917129999783356,
+            0.07139489999826765,
+            0.06817690000025323
+          ],
+          "cold_compute_seconds": [
+            0.07216019999759737,
+            0.07436920000327518,
+            0.07113750000280561
+          ],
+          "correctness": {
+            "total": 160,
+            "oracle_mapped": 121,
+            "mapped": 121,
+            "false_unmapped": 0,
+            "invalid_mapping": 0,
+            "optimal_mapping": 121,
+            "suboptimal_mapping": 0,
+            "tie_count_disagreements": 0,
+            "oracle_ambiguous_mapped": 49
+          },
+          "peak_additional_python_bytes": 297888,
+          "index_keys": 457,
+          "index_positions": 1083,
+          "median_build_seconds": 0.0029743000050075352,
+          "median_alignment_seconds": 0.06917129999783356,
+          "median_cold_compute_seconds": 0.07216019999759737
+        },
+        "full-k12-early-exit": {
+          "config": {
+            "max_mismatches": 2,
+            "max_hits_per_seed": null,
+            "min_seed_votes": 1,
+            "early_exit": true,
+            "minimizer_w": null,
+            "k": 12
+          },
+          "build_seconds": [
+            0.00032049999572336674,
+            0.0003108999953838065,
+            0.0003017000053660013
+          ],
+          "alignment_seconds": [
+            0.02275230000668671,
+            0.023779800001648255,
+            0.02247209999768529
+          ],
+          "cold_compute_seconds": [
+            0.023072800002410077,
+            0.02409069999703206,
+            0.022773800003051292
+          ],
+          "correctness": {
+            "total": 160,
+            "oracle_mapped": 121,
+            "mapped": 121,
+            "false_unmapped": 0,
+            "invalid_mapping": 0,
+            "optimal_mapping": 121,
+            "suboptimal_mapping": 0,
+            "tie_count_disagreements": 20,
+            "oracle_ambiguous_mapped": 49
+          },
+          "peak_additional_python_bytes": 414397,
+          "index_keys": 1039,
+          "index_positions": 2037,
+          "median_build_seconds": 0.0003108999953838065,
+          "median_alignment_seconds": 0.02275230000668671,
+          "median_cold_compute_seconds": 0.023072800002410077
+        }
+      }
+    },
+    {
+      "name": "seed-disruption",
+      "reference_bases": 40,
+      "reads": 5,
+      "oracle": {
+        "alignment_seconds": [
+          6.0999998822808266e-05,
+          4.8300003982149065e-05,
+          4.8300003982149065e-05
+        ],
+        "median_alignment_seconds": 4.8300003982149065e-05,
+        "peak_additional_python_bytes": 4322
+      },
+      "variants": {
+        "full-k12": {
+          "config": {
+            "max_mismatches": 2,
+            "max_hits_per_seed": null,
+            "min_seed_votes": 1,
+            "early_exit": false,
+            "minimizer_w": null,
+            "k": 12
+          },
+          "build_seconds": [
+            1.0099996870849282e-05,
+            1.170000177808106e-05,
+            1.1500000255182385e-05
+          ],
+          "alignment_seconds": [
+            7.329999789362773e-05,
+            7.999999797903001e-05,
+            7.360000017797574e-05
+          ],
+          "cold_compute_seconds": [
+            8.339999476447701e-05,
+            9.169999975711107e-05,
+            8.510000043315813e-05
+          ],
+          "correctness": {
+            "total": 5,
+            "oracle_mapped": 4,
+            "mapped": 4,
+            "false_unmapped": 0,
+            "invalid_mapping": 0,
+            "optimal_mapping": 4,
+            "suboptimal_mapping": 0,
+            "tie_count_disagreements": 0,
+            "oracle_ambiguous_mapped": 2
+          },
+          "peak_additional_python_bytes": 7223,
+          "index_keys": 1,
+          "index_positions": 29,
+          "median_build_seconds": 1.1500000255182385e-05,
+          "median_alignment_seconds": 7.360000017797574e-05,
+          "median_cold_compute_seconds": 8.510000043315813e-05
+        },
+        "full-k15": {
+          "config": {
+            "max_mismatches": 2,
+            "max_hits_per_seed": null,
+            "min_seed_votes": 1,
+            "early_exit": false,
+            "minimizer_w": null,
+            "k": 15
+          },
+          "build_seconds": [
+            1.4500001270789653e-05,
+            1.0700001439545304e-05,
+            1.0600000678095967e-05
+          ],
+          "alignment_seconds": [
+            5.329999839887023e-05,
+            5.0499998906161636e-05,
+            5.0199996621813625e-05
+          ],
+          "cold_compute_seconds": [
+            6.779999966965988e-05,
+            6.120000034570694e-05,
+            6.079999729990959e-05
+          ],
+          "correctness": {
+            "total": 5,
+            "oracle_mapped": 4,
+            "mapped": 2,
+            "false_unmapped": 2,
+            "invalid_mapping": 0,
+            "optimal_mapping": 2,
+            "suboptimal_mapping": 0,
+            "tie_count_disagreements": 0,
+            "oracle_ambiguous_mapped": 1
+          },
+          "peak_additional_python_bytes": 6755,
+          "index_keys": 1,
+          "index_positions": 26,
+          "median_build_seconds": 1.0700001439545304e-05,
+          "median_alignment_seconds": 5.0499998906161636e-05,
+          "median_cold_compute_seconds": 6.120000034570694e-05
+        },
+        "minimizer-k12-w4": {
+          "config": {
+            "max_mismatches": 2,
+            "max_hits_per_seed": null,
+            "min_seed_votes": 1,
+            "early_exit": false,
+            "minimizer_w": 4,
+            "k": 12
+          },
+          "build_seconds": [
+            4.3199994252063334e-05,
+            4.3799998820759356e-05,
+            4.320000152802095e-05
+          ],
+          "alignment_seconds": [
+            0.0005208000002312474,
+            0.0004737999988719821,
+            0.00048689999675843865
+          ],
+          "cold_compute_seconds": [
+            0.0005639999944833107,
+            0.0005175999976927415,
+            0.0005300999982864596
+          ],
+          "correctness": {
+            "total": 5,
+            "oracle_mapped": 4,
+            "mapped": 4,
+            "false_unmapped": 0,
+            "invalid_mapping": 0,
+            "optimal_mapping": 4,
+            "suboptimal_mapping": 0,
+            "tie_count_disagreements": 0,
+            "oracle_ambiguous_mapped": 2
+          },
+          "peak_additional_python_bytes": 13091,
+          "index_keys": 1,
+          "index_positions": 26,
+          "median_build_seconds": 4.320000152802095e-05,
+          "median_alignment_seconds": 0.00048689999675843865,
+          "median_cold_compute_seconds": 0.0005300999982864596
+        },
+        "full-k12-early-exit": {
+          "config": {
+            "max_mismatches": 2,
+            "max_hits_per_seed": null,
+            "min_seed_votes": 1,
+            "early_exit": true,
+            "minimizer_w": null,
+            "k": 12
+          },
+          "build_seconds": [
+            1.309999788645655e-05,
+            9.999996109399945e-06,
+            9.800001862458885e-06
+          ],
+          "alignment_seconds": [
+            6.570000550709665e-05,
+            6.179999763844535e-05,
+            6.27999979769811e-05
+          ],
+          "cold_compute_seconds": [
+            7.88000033935532e-05,
+            7.179999374784529e-05,
+            7.259999983943999e-05
+          ],
+          "correctness": {
+            "total": 5,
+            "oracle_mapped": 4,
+            "mapped": 4,
+            "false_unmapped": 0,
+            "invalid_mapping": 0,
+            "optimal_mapping": 4,
+            "suboptimal_mapping": 0,
+            "tie_count_disagreements": 1,
+            "oracle_ambiguous_mapped": 2
+          },
+          "peak_additional_python_bytes": 7223,
+          "index_keys": 1,
+          "index_positions": 29,
+          "median_build_seconds": 9.999996109399945e-06,
+          "median_alignment_seconds": 6.27999979769811e-05,
+          "median_cold_compute_seconds": 7.259999983943999e-05
+        }
+      }
+    }
+  ]
+}

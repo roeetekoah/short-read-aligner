@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "short-read-aligner"
+version = "0.1.0"
+description = "Educational ungapped seed-and-extend alignment with independent correctness evidence"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Roee Tekoah"}]
+dependencies = []
+
+[project.scripts]
+short-read-aligner = "short_read_aligner.__main__:main"
+
+[tool.setuptools]
+packages = ["short_read_aligner"]

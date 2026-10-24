@@ -1,0 +1,14 @@
+{
+  "python": "3.13.13",
+  "platform": "Windows 11",
+  "wheel_built_without_network_or_runtime_dependencies": true,
+  "source_distribution_built": true,
+  "isolated_venv_wheel_install": true,
+  "installed_package_import_confirmed_outside_source_root": true,
+  "console_entry_point_version": "0.1.0",
+  "installed_cli_fixture_matches_expected_bytes": true,
+  "source_archive_tests_passed": 16,
+  "source_archive_fixture_regeneration_verified": true,
+  "source_archive_boundary_audit": "checked; standard setuptools metadata allowed",
+  "note": "Exact final artifact fingerprints are retained in the local preparation audit, outside the distributable source."
+}

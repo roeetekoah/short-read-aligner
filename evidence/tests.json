@@ -1,0 +1,10 @@
+{
+  "python": "3.13.13",
+  "tests": 16,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "oracle_comparisons": 120402,
+  "exhaustive_comparisons": 120400,
+  "success": true
+}
